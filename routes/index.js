@@ -18,7 +18,9 @@ router.param('commentId', commentController.load);  // autoload :commentId
 router.param('userId', userController.load);  // autoload :userId
 
 // Definición autor /author
-router.get('/author',                      quizController.author);
+router.get("/author",function(req,res){
+	res.render('author');
+});
 
 // Definición de rutas de sesion
 router.get('/login',  sessionController.new);     // formulario login
